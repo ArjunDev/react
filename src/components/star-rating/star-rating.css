@@ -1,0 +1,7 @@
+.active{
+  fill: yellow; 
+  /* fill is a built in property in the start SVG */
+}
+.inactive{
+  fill: black;
+}

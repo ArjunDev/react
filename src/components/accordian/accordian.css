@@ -1,0 +1,38 @@
+*{
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.accrdian{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+}
+.item{
+  background-color: rgb(133, 96, 10);
+  min-width: 400px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.author{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 10px;
+}
+.quote{
+  padding: 10px;
+  padding-top: 0px;
+  width: 400px;
+  text-wrap: wrap;
+}
+h2{
+  font-size: medium;
+}
