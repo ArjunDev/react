@@ -1,0 +1,63 @@
+.modal-btn,
+.disable-modal-btn{
+  margin-top: 2.25rem;
+  position: relative;
+  z-index: 1;
+  background-color: rgb(196, 196, 31);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  box-shadow: 1px 1px 5px 1px black;
+  cursor: pointer;
+}
+.modal-btn:hover{
+  transition: ease-in 0.15s;
+  background-color: rgba(196, 196, 31, 0.75);
+}
+.disable-modal-btn{
+  opacity: 0.5;
+}
+.modalpopup-container{
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  z-index: 10; /* High z-index to ensure it overlays */
+  background-color: rgb(175, 236, 175);
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 1px 1px 6px 1px black;
+}
+.modal-header{
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(13, 185, 13);
+}
+.modal-footer{
+  height: 20%;
+  background-color: rgb(13, 185, 13);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+}
+.modalpopup-close-btn{
+  position: absolute;
+  top: 1px;
+  right: 2px;
+  font-size: 20px;
+  padding: 2px;
+  cursor: pointer;
+  color: red;
+  box-shadow: 1px 1px 3px 1px black;
+}
