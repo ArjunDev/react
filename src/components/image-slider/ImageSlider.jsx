@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react"
 import {BsArrowLeftCircleFill, BsArrowRightCircleFill} from "react-icons/bs"
 import "./image-slider.css"
 
-
 function ImageSlider({url, page=1, limit=10}){
   const [images, setImages] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -28,27 +27,31 @@ function ImageSlider({url, page=1, limit=10}){
   function handleLeftArrow(){
     setCurrentSlide(currentSlide === 0 ? 
       images.length - 1 : currentSlide - 1)
-      console.log("clicked on left arrow")
+      //console.log("clicked on left arrow")
   }
   function handleRighttArrow(){
     setCurrentSlide(currentSlide === images.length - 1 ? 
       0 : currentSlide + 1)
-    console.log("clicked on right arrow") 
+    //console.log("clicked on right arrow") 
   }
 
   useEffect(() => {
     if(url !== ""){
       fetchImages(url);
-      setLoading("true");
+      setLoading(true);
     }
   },[url])
 
   if(loading){
-    return <div>Loading images! please wait</div>
+    //console.log("Loading images! please wait") 
+    return (
+      <div className="loading-msg">
+        <p>Loading images! please wait</p>
+      </div>
+      )
   }
-
   if(errorMsg !== null){
-    return <div>Error occurred! try again</div>
+    return <div className="error-msg">Error occurred! try again</div>
   }
   //console.log(images);
   return(
